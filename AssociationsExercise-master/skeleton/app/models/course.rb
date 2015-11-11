@@ -12,7 +12,7 @@ class Course < ActiveRecord::Base
     source: :user
     )
 
-  has_many(
+  belongs_to(
   :prerequisites,
   :class_name => "Course",
   foreign_key: :prereq_id,
